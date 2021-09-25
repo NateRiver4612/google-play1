@@ -7,7 +7,6 @@ import { selectItemDetail } from '../../redux/store/store.selector'
 
 const RelatedCollection=({id,type,itemDetail,chosenType,items,doc})=>{
         
-    
         const CreateRandomItemsList = useCallback(
             (items) => {
                 const typeArr = type.split(',')
@@ -60,12 +59,29 @@ const RelatedCollection=({id,type,itemDetail,chosenType,items,doc})=>{
 
 
                 if(doc == 'movies'){
-                    const {director} = itemDetail
-                    itemList = itemList.filter((item)=>
-                        director.includes(item.director.split(',')[0].trim())
+                    var {director, writer,producer,performer} = itemDetail
+                    itemList = itemList.filter((item)=>{
+                        const itemPerformer =  item.performer.split(',').map(item=>item.trim())
+                        const itemProducer =  item.producer.split(',').map(item=>item.trim())
+                        const itemWriter =  item.writer.split(',').map(item=>item.trim())
+                        const itemDirector =  item.director.split(',').map(item=>item.trim())
+
+                        return (
+                            itemPerformer.some(person => performer.split(',').map(item=>item.trim()).includes(person))
+                        || itemProducer.some(person => producer.split(',').map(item=>item.trim()).includes(person))
+                        || itemWriter.some(person => writer.split(',').map(item=>item.trim()).includes(person))
+                        || itemDirector.some(person => director.split(',').map(item=>item.trim()).includes(person))
+                        )
+                    }
                     )
                 } 
-                
+                console.log('list',itemList)
+                // const array = itemList.map(item=>{
+                //     console.log('asd',item.producer.split(',')[0])
+                //     return item
+                // })
+                // console.log('damn',array)
+
                 if(doc == 'books'){
                     const {author} = itemDetail
                     itemList = itemList.filter((item)=>

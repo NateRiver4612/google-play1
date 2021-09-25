@@ -41,7 +41,7 @@ const RelatedItem=({title,type,imgUrl,history,doc,author,id,selectCurrentItemSta
                     history.replace(`/${doc}/details/${title}${md5(id)}`);
                     selectCurrentItemStart(id,type);
                 }}>
-                    {`${description.substr(0,94)}`}
+                    {`${description.substr(0,84)}`}
                 </Span>
                 <Wrap className="relate-price-rate">  
                    <Wrap className="relate-rate">

@@ -25,11 +25,11 @@ const CategoryBar=({history,toggleCartHidden,empty,currentCart,homeLink})=> {
             setCurrentColor('#689f38')
         }
     }, [currentOption])
-
+    console.log('cart',currentCart)
     return (
         <Container >
             <Wrap style={{visibility:`${empty ? 'hidden' : ''}`}} className="Category" onClick={toggleCartHidden}>
-                {currentCart} 
+                {currentCart.trim()} 
                 <ExpandIcon/>
             </Wrap>   
 
