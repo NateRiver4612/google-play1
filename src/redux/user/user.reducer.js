@@ -1,0 +1,41 @@
+import UserActionTypes from './user.type';
+
+const INITIAL_STATE = {
+  currentUser: null,
+  error: null,
+  Users:null,
+  userHidden:true
+};
+
+const userReducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case UserActionTypes.SIGN_IN_SUCCESS:
+      return {
+        ...state,
+        currentUser: action.payload,
+        error: null
+      };
+    case UserActionTypes.TOGGLE_USER_HIDDEN:
+      return{
+        ...state,
+        userHidden:!state.userHidden
+    }
+    case UserActionTypes.SIGN_OUT_SUCCESS:
+      return {
+        ...state,
+        currentUser: null,
+        error: null
+      };
+    case UserActionTypes.SIGN_IN_FAILURE:
+    case UserActionTypes.SIGN_OUT_FAILURE:
+    case UserActionTypes.SIGN_UP_FAILURE:
+      return {
+        ...state,
+        error: action.payload
+      };
+    default:
+      return state;
+  }
+};
+
+export default userReducer

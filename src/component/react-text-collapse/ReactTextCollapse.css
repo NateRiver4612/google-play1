@@ -1,0 +1,14 @@
+.dealingPart{
+    position: relative;
+    overflow: hidden !important;
+}
+.dealingPart::after{
+    position: sticky;
+    right:0px;
+    content:'';
+    background-image:linear-gradient(to bottom, rgba(255,255,255, 0), rgba(255,255,255, 1) 75%);
+    height: 50px;
+    overflow:inherit;
+    padding-bottom: 5px !important;
+    width:100%;
+}

@@ -1,0 +1,7 @@
+const CartActionTypes = {
+    TOGGLE_CART_HIDDEN: 'TOGGLE_CART_HIDDEN',
+    FETCHING_CART_CATEGORY:'FETCHING_CART_CATEGORY',
+    SELECT_CART:'SELECT_CART'
+};
+  
+export default CartActionTypes;
