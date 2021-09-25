@@ -258,7 +258,7 @@ const  DetailMovie= ({id,currentUser,listItems,buyItems,history,signInWithGoggle
 
 
             <Wrap className="director-writer">
-                <Wrap  className='director'>    
+                <Wrap  className='director'>
                     <h2>Director</h2>
                     <Wrap className="director-list">
                         {directorList.map((director,index)=>{
