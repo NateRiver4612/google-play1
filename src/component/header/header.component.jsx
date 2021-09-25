@@ -16,33 +16,36 @@ import { toggleUser } from '../../redux/user/user.action';
 import { withRouter } from 'react-router';
 import {useLocation} from 'react-router-dom'
 import { SearchItem } from '../../redux/search/search.action';
-import { selectSearchField } from '../../redux/search/search.selector';
 
-const Header = ({hidden,history,currentUser,SearchItem,searchField,toggleUser,match,userHidden,toggleList})=>{
+const Header = ({hidden,history,currentUser,SearchItem,toggleUser,match,userHidden,toggleList})=>{
   const [state,setState] =  useState(true);
   const location = useLocation()
+  const [searchField,setSearchField] = useState('')
 
   const currentPage = location.pathname.split('/')[1]
 
   const handleKeyPress = (event) => {
     if (event.key === 'Enter') {
-      if(event.target.value.length !== 0 ){
-        history.push(`/${currentPage}/search/${event.target.value}`)
-        SearchItem(event.target.value)
+      if(searchField !== 0 ){
+        history.push(`/${currentPage}/search/${searchField}`)
+        SearchItem(searchField)
       }
     }
   }
   const handleOnClick = (event)=>{
-    if(event.target.value.length !== 0 ){
-      history.push(`/${currentPage}/search/${event.target.value}`)
-      SearchItem(event.target.value)
+    if(searchField !== 0 ){
+      history.push(`/${currentPage}/search/${searchField}`)
+      console.log('searchField',searchField)
+      SearchItem(searchField)
     }
   }
 
   const onChangeHandling = (event)=>{
       if(event.target.value.length !== 0){
         setState(false);
+        setSearchField(event.target.value)
       }else{
+        setSearchField('')
         setState(true);
       }
   }
@@ -88,7 +91,6 @@ const mapStateToProps = createStructuredSelector({
   hidden:selectListHidden,
   currentUser:selectCurrentUser,
   userHidden:selectUserToggleCart,
-  searchField:selectSearchField
 })
 
 const mapDispatchToProps = dispatch =>({

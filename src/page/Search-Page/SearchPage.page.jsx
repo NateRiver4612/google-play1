@@ -2,12 +2,12 @@ import React,{memo,useState} from 'react'
 import styled from 'styled-components'
 import MovieItem from '../../component/item/MovieItem/MovieItem.component'
 import {connect} from 'react-redux'
-import { selectItemsByOption} from '../../redux/store/store.selector'
+import { selectItemsByOption, selectItems} from '../../redux/store/store.selector'
 import { selectSearchField } from '../../redux/search/search.selector'
 
-const SearchPage=({items,match,searchField})=>{
+const SearchPage=({items,match,allItems,searchField})=>{
     // const [searchItems,setSearchItems] = useState([])
-
+    console.log('all',allItems)
     var arr = []
     const currentPage = match.path.split('/')[1]
     const searchFieldParams = match.params.searchInfo
@@ -104,7 +104,8 @@ const Container = styled.div.attrs((props)=>({
 
 const mapStateToProps =(state,ownProps)=>({
     items: selectItemsByOption(ownProps.match.path.split('/')[1])(state),
-    searchField:selectSearchField(state)
+    searchField:selectSearchField(state),
+    allItems:selectItems(state)
 })
 
 
