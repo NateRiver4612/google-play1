@@ -1,4 +1,4 @@
-import React,{useState, useLayoutEffect,memo,useEffect,useMemo} from 'react';
+import React,{useState, useRef, useLayoutEffect,memo,useEffect,useMemo} from 'react';
 import { Link } from 'react-router-dom';
 import ModalVideo from "react-modal-video";
 import {selectItemDetail} from '../../../redux/store/store.selector'
@@ -21,17 +21,25 @@ import { withRouter } from 'react-router';
 import { selectBuyItems } from '../../../redux/buy-list/BuyList.selector';
 import {TiTick} from 'react-icons/ti'
 
-const  DetailMovie= ({id,currentUser,listItems,buyItems,history,signInWithGoggleStart,removeItem,addItem,doc,selectPersonStart,item})=>{
+const  DetailMovie= ({id,currentUser,match,listItems,buyItems,history,signInWithGoggleStart,removeItem,addItem,doc,selectPersonStart,item})=>{
     const [isOpen, setstate] = useState(false)
     const [comments,setComments] = useState([]) 
     
     const location = useLocation();
     
-    // Scroll to top if path changes
-    useLayoutEffect(() => {
-        window.scrollTo(0, 0);
-    }, [location.pathname]);
+    const myRef = useRef(null)
 
+    const executeScroll = () => myRef.current.scrollIntoView()    
+
+    
+
+    // Scroll to top if path changes
+    // useEffect(() => {
+    //     executeScroll();
+    // });
+
+    
+    window.scrollTo(0, 0);
     
     const {title,rate,price,type,imgUrl,videoImg,videoUrl,description,duration,year,warning,performer,producer,writer,director} = item
     useEffect(() => {
@@ -119,7 +127,7 @@ const  DetailMovie= ({id,currentUser,listItems,buyItems,history,signInWithGoggle
                 <img src={imgUrl}/>
             </Wrap>
 
-            <Wrap className="detail-info">
+            <Wrap  className="detail-info">
                 <Span className='title'>{title}</Span>
                 <Span className='date-time'>
                     <span>

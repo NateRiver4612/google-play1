@@ -1,4 +1,4 @@
-import React,{lazy, Suspense} from 'react'
+import React,{lazy,useRef,useEffect, Suspense} from 'react'
 import {Route} from 'react-router-dom'
 import { selectCartCategories } from '../../redux/cart/cart.selector'
 import { connect } from 'react-redux'
@@ -15,8 +15,19 @@ const PersonPage = lazy(()=>import('../Person-Page/Person.page'))
 const SearchPage = lazy(()=>import('../Search-Page/SearchPage.page'))
 
 const Book=({match,cartCategories,hidden})=>{
+
+    const myRef = useRef(null)
+
+    const executeScroll = () => myRef.current.scrollIntoView()    
+
+    
+
+    // Scroll to top if path changes
+    useEffect(() => {
+        executeScroll();
+    });
     return (
-        <div>
+        <div  ref={myRef}>
             <CategoryBar  homeLink='/books'/>
             {hidden
                 ?

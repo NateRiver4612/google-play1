@@ -1,4 +1,4 @@
-import React,{lazy,Suspense, useEffect} from 'react'
+import React,{lazy,useRef,Suspense, useEffect} from 'react'
 import {Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import { selectCartCategories } from '../../redux/cart/cart.selector'
@@ -23,15 +23,20 @@ const SearchPage = lazy(()=>import('../Search-Page/SearchPage.page'))
 
 
 const Movie=({match,cartCategories,history,hidden})=> {
-    const location = useLocation();
+    const myRef = useRef(null)
+
+    const executeScroll = () => myRef.current.scrollIntoView()    
+
     // Scroll to top if path changes
     useEffect(() => {
-        history.listen(()=>{ window.scrollTo(0, 0)})
-    })
+        executeScroll();
+    });
+
+    
     return (
-        <Container>
+        <Container ref={myRef}>
         <ErrorBoundary>
-            <CategoryBar style={{position:'fixed'}} homeLink='/movies'/>
+            <CategoryBar  style={{position:'fixed'}} homeLink='/movies'/>
             {hidden
                 ?
                 null

@@ -99,9 +99,8 @@ const Person = ({person,items})=> {
                 :
                     job == 'authors'
                     ?
-                    participatedList.map(book=>{
-                        const {title, imgUrl,price,rate,type,id,description,author,published,page,language} = book
-                        return <BookItem  imgURL={imgUrl} key = {id} id={id} type={type} author={author} price={price} title={title} rate={rate} />
+                    participatedList.map(item=>{
+                        return <BookItem  item={item}/>
                     })
                     :
                     []

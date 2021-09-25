@@ -11,7 +11,7 @@ import { selectCurrentUser} from '../../redux/user/user.selector';
 const MovieDetail=({currentItem,currentUser,listItems})=>{
   const {id,type} = currentItem
   const oneType = type.includes(',') ? type.substr(0,type.indexOf(',')) : type
-
+  window.scrollTo(0, 0);
   return (
     <Container>
         <Wrap className="detail">

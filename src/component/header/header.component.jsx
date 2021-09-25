@@ -35,7 +35,6 @@ const Header = ({hidden,history,currentUser,SearchItem,toggleUser,match,userHidd
   const handleOnClick = (event)=>{
     if(searchField !== 0 ){
       history.push(`/${currentPage}/search/${searchField}`)
-      console.log('searchField',searchField)
       SearchItem(searchField)
     }
   }
