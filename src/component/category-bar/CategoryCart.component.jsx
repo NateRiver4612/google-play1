@@ -44,7 +44,7 @@ const CategoryCart =({categories,history,selectCart,toggleCartHidden,match,optio
     return (
         <Container>
             <Span onClick={()=>{
-                history.push(currentOption == 'App' ? `${match.url}` : `${match.url}/${currentOption}`)
+                history.push(`${match.url}`)
                 selectCart(option) 
                 toggleCartHidden()
             }}>{currentOption}</Span>
