@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { removeItem } from '../../redux/wish-list/wishList.action.js';
 import React,{useMemo} from 'react'
 
-const StripeCheckoutButton = ({price,doc,item,BuyItemStart,content,total})=>{
+const StripeCheckoutButton = ({price,wishList,doc,item,BuyItemStart,content,total})=>{
     const priceForStripe = price*100
     const publishableKey = "pk_test_51JOLZMF0RXpkTkFSFLqznUqj9jVy3BMJpJ9ELRNBVJrvES6x4kKyiqelyBTSPKjxi8qw3T2Gj7syKKeO7UGop8Ie00hgX7zMCJ"
     const date = new Date()
@@ -33,7 +33,15 @@ const StripeCheckoutButton = ({price,doc,item,BuyItemStart,content,total})=>{
             'There was an issue with your payment.Please sure you use the provided credit card'
           )
         })
-        BuyItemStart({doc,item,date})
+        if(wishList){
+          wishList.map(Item=>{
+            const item = Item['item']
+            const doc = Item['doc']
+            BuyItemStart({doc,item,date})
+          })
+        }else{
+          BuyItemStart({doc,item,date})
+        }
         alert('Payment Succesful!');
       };
     return (

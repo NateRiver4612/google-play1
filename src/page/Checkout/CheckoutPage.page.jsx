@@ -10,7 +10,7 @@ import { selectWishListTotal } from '../../redux/wish-list/wishList.selector'
 import StripeCheckoutButton from '../../component/stripe-button/stripe-button.component'
 
 const  CheckoutPage = ({wishList,total})=>{
-    console.log(total)
+    console.log('wishList',wishList)
     return (
         <Container>
             <Wrap className='checkout-header'>
@@ -19,7 +19,7 @@ const  CheckoutPage = ({wishList,total})=>{
                 </Wrap>
                 <Wrap className="header-block">
                 <h1>
-                    <StripeCheckoutButton total price={total} content={`Pay in total: ${total},000 VND`}/>
+                    <StripeCheckoutButton wishList={wishList} total price={total} content={`Pay in total: ${total},000 VND`}/>
                 </h1>
                 </Wrap>
             </Wrap>
