@@ -52,7 +52,7 @@ const Header = ({hidden,history,currentUser,SearchItem,toggleUser,match,userHidd
   // <img style={{paddingLeft:'20px',width:'39px',height:'39px'}} src='https://scontent.fsgn2-4.fna.fbcdn.net/v/t1.15752-9/90716814_227701518373804_7491086833023975424_n.png?_nc_cat=109&ccb=1-4&_nc_sid=ae9488&_nc_ohc=ME_fxo0ks-sAX-7mqZG&_nc_ht=scontent.fsgn2-4.fna&oh=566924fb4b39ff7354b44fef181f0c29&oe=61369CDB'/> 
   return(
     <Container>
-      <LINK to="/">
+      <LINK to="/entertainment">
         <img  src='https://brandlogos.net/wp-content/uploads/2021/04/play-store-logo-512x512.png'/> 
         <span style={{margin:0}}>
         <span style={{margin:0,color:'#29ace2'}}>G</span>
