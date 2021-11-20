@@ -109,12 +109,13 @@ const RelatedCollection=({id,type,itemDetail,chosenType,items,doc})=>{
         {
             doc === 'movies'
             ?
-            CreateRandomItemsList(items).map(key=>{
-
-                    const {title,price,id,rate,description,type,imgUrl} = key
-                    // const oneType = type.includes(',') ? type.substr(0,type.indexOf(',')):type  
-                    return <RelatedItem title={title} id={id} doc={doc} key={id} imgUrl={imgUrl} price={price} type={type}
-                                            rate={rate} description={description}></RelatedItem>
+            CreateRandomItemsList(items).map((key, index)=>{
+                    if(index < 4){
+                        const {title,price,id,rate,description,type,imgUrl} = key
+                        // const oneType = type.includes(',') ? type.substr(0,type.indexOf(',')):type  
+                        return <RelatedItem title={title} id={id} doc={doc} key={id} imgUrl={imgUrl} price={price} type={type}
+                                                rate={rate} description={description}></RelatedItem>
+                    }
                 }) 
             :
             doc === 'books'

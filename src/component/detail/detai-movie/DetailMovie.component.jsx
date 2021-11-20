@@ -31,17 +31,8 @@ const  DetailMovie= ({id,currentUser,match,listItems,buyItems,history,signInWith
 
     const executeScroll = () => myRef.current.scrollIntoView()    
 
-    
-
-    // Scroll to top if path changes
-    // useEffect(() => {
-    //     executeScroll();
-    // });
-
-    
-    window.scrollTo(0, 0);
-    
     const {title,rate,price,type,imgUrl,videoImg,videoUrl,description,duration,year,warning,performer,producer,writer,director} = item
+    
     useEffect(() => {
         const usersRef = firestore.collection('commentors').doc('movie')
         usersRef.onSnapshot(
@@ -59,9 +50,9 @@ const  DetailMovie= ({id,currentUser,match,listItems,buyItems,history,signInWith
         )
     },[item])
 
-    useEffect(() => {
-        history.listen(()=>{ window.scrollTo(0, 0)})
-    })
+    // useEffect(() => {
+    //     history.listen(()=>{ window.scrollTo(0, 0)})
+    // })
 
     const added = useMemo(()=>{
         return listItems.find(listItem=>listItem['item'].id === id && listItem['doc'] === doc)
