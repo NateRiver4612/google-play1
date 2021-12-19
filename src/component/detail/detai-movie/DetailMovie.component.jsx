@@ -49,14 +49,11 @@ const  DetailMovie= ({id,currentUser,match,listItems,buyItems,history,signInWith
             }
         )
     },[item])
-
-    // useEffect(() => {
-    //     history.listen(()=>{ window.scrollTo(0, 0)})
-    // })
-
+    
     const added = useMemo(()=>{
         return listItems.find(listItem=>listItem['item'].id === id && listItem['doc'] === doc)
     },[item,listItems])
+
 
     const buyed = useMemo(()=>{
         return buyItems.find(item=>item['item'].id === id && item['doc'] === doc)
@@ -86,7 +83,6 @@ const  DetailMovie= ({id,currentUser,match,listItems,buyItems,history,signInWith
         ),
     [comments])
     
-
 
     const typesArray = type.split(',')
     const performerList = performer.split(',')
@@ -239,6 +235,7 @@ const  DetailMovie= ({id,currentUser,match,listItems,buyItems,history,signInWith
                         })}
                     </Wrap>
                 </Wrap>
+                
                 <Wrap className = 'producer'>
                     <h2>Producer</h2>
                     <Wrap className="producer-list">
