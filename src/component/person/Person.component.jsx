@@ -22,7 +22,6 @@ const Person = ({ person, items }) => {
   const eraseDuplicate = useCallback(
     (arr) => {
       for (var i = 0; i < arr.length; i++) {
-        console.log(i);
         for (var j = arr.length - 1; j > i; j--) {
           if (arr[i]["id"] == arr[j]["id"]) {
             arr.splice(j, 1);

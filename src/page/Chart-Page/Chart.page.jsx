@@ -5,15 +5,10 @@ import { connect } from "react-redux";
 import BookItem from "../../component/item/BookItem/BookItem.component";
 import { selectItemsByOption } from "../../redux/store/store.selector";
 import { selectBuyItems } from "../../redux/buy-list/BuyList.selector";
-import { useLocation } from "react-router-dom";
 
 const ChartPage = ({ items, buyItems, match }) => {
   const [selectedItems, setSelectedItems] = useState([]);
   const date = new Date();
-  const location = useLocation();
-
-  console.log("hash", location.hash);
-  console.log("pathname", location.pathname);
 
   const history = match?.url?.split("/")[1];
 

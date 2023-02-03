@@ -9,8 +9,6 @@ const MovieHome = ({ movies, match }) => {
   const shuffleArray = (array) => {
     array = [...Object.keys(array).map((key) => array[key])];
 
-    console.log(array);
-
     array.sort(function (a, b) {
       // Turn your strings into dates, and then subtract them
       // to get a value that is either negative, positive, or zero.
