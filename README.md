@@ -20,7 +20,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://google-play1.vercel.app/entertainment)
 
-For the Front-End, <a href="https://beta.reactjs.org/">ReactJS</a> is the best best Framwork for building front-end back in 2020 for its powers including flexibility, speed, reusable components, easy to approach, etc. For the back-end, we host all of our data in Firestore, Fireabase Storage, and Firebase Authentication for monitoring users google account, this website doesn't have server-side instead, we using APIs for Firebase document query for fetching and updating from database. Finally host our website on <a href="https://vercel.com/dashboard">Vercel</a>.
+For the Front-End, <a href="https://beta.reactjs.org/">ReactJS</a> is the best best Framwork for building front-end back in 2020 for its powers including flexibility, speed, reusable components, easy to approach, etc. For State-Managing we use Redux and ReduxSaga middleware. On the server-side, we host all of our data in Firestore, Fireabase Storage, and Firebase Authentication for monitoring users google account, this website doesn't have server-side instead, we using APIs for Firebase document query for fetching and updating from database. Finally host our website on <a href="https://vercel.com/dashboard">Vercel</a>.
 
 
 ### Built With
