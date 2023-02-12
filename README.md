@@ -7,7 +7,7 @@
 <h3 align="center">My Google Play</h3>
 
   <p align="center">
-   Website was built inspired by the Google Play store UI/UX in term of product selling,  put every aspects of React from basic to advanced into practices, responsiveness is not the strong suit of this website at the moment, mostly dive deep into massive State Managings using Redux, handle side effects with Redux Saga, basic level of user security using Firebase and customized middleware.
+   Website was built inspired by the Google Play store UI/UX in term of product selling simulation, put every aspects of WebDev from basic to advanced into practices, responsiveness is not the strong suit of this website at the moment, mostly dive deep into massive State Managing using Redux, handle side effects with Redux Saga, basic level of user security using Firebase and customized middleware.
   </p>
 </div>
 
@@ -44,15 +44,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://full-stack-asos.vercel.app)
+[![Product Name Screen Shot][product-screenshot]](https://google-play1.vercel.app/entertainment)
 
-For the Front-End, <a href="https://nextjs.org/">NextJS</a> is the best fit in the market for its well-known advantages such as excellent performance in terms of load times, great SEO, load times helped with "lazy loading" and automatic code splitting, pre-rendering which make our application more versatile, etc. For the back-end, our website static data will be fetched from <a href="https://rapidapi.com/apidojo/api/asos2">RapidAPI</a> and dynamic data will be stored in <a href="https://www.mongodb.com/">MongoDB</a> and queried using <a href="https://www.apollographql.com/docs/">Apollo GraphQL</a>. We chose GraphQL over REST APIs because again for practical purposes, putting up the challenge, but must not despite the fact that GraphQL has the power to dominate Rest in some aspects such as Data fetching control, alleviating multiple data sources, etc. We use Firebase Auth for user identification and authentication, simulating items purchased using Stripe, and testing with Unit tests.Finally host our website on <a href="https://vercel.com/dashboard">Vercel</a>.
+For the Front-End, <a href="https://beta.reactjs.org/">ReactJS</a> is the best best Framwork for building front-end back in 2020 for its powers including flexibility, speed, reusable components, easy to approach, etc. For the back-end, we host all of our data in Firestore, Fireabase Storage, and Firebase Authentication for monitoring users google account, this website doesn't have server-side instead, we using APIs for Firebase document query for fetching and updating from database. Finally host our website on <a href="https://vercel.com/dashboard">Vercel</a>.
 
 
 ### Built With
 
 * [![React][React.js]][React-url]
 * [![MaterialUI][MaterialUI.com]][Material-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![Firebase][Firebase.com]][Firebase-url]
 * [![Redux][ReduxToolkit.com]][ReduxToolkit-url]
 
@@ -134,7 +135,7 @@ Project Link: [https://github.com/NateRiver4612/FullStack-Asos.git](https://gith
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: public/images/screenshot.png
+[product-screenshot]: public/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
