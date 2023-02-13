@@ -92,71 +92,35 @@ export const convertCollectionsSnapshotToMap = (snapShot) => {
     const { categories } = doc.data();
 
     if (id === "book") {
-      const history = {};
-      const education = {};
-      const travel = {};
-      const thriller = {};
-      const computerTechnology = {};
-      const artsEntertainment = {};
-      const detectiveMystery = {};
-      const religion = {};
-      const children = {};
-      const scienceMath = {};
-      const cooking = {};
-      const fiction = {};
+      const history = {}; //
+      const thriller = {}; //
+      const scienceMath = {}; //
+      const fiction = {}; //
 
       categories.map((doc, index) => {
-        if (doc.type.includes("Detective Mystery")) {
-          detectiveMystery[index] = { id: index, ...doc };
-        }
         if (doc.type.includes("History")) {
+          //
           history[index] = { id: index, ...doc };
         }
         if (doc.type.includes("Thriller")) {
+          //
           thriller[index] = { id: index, ...doc };
         }
         if (doc.type.includes("Fiction")) {
+          //
           fiction[index] = { id: index, ...doc };
         }
-        if (doc.type.includes("Education")) {
-          education[index] = { id: index, ...doc };
-        }
-        if (doc.type.includes("Travel")) {
-          travel[index] = { id: index, ...doc };
-        }
-        if (doc.type.includes("Computer and Technology")) {
-          computerTechnology[index] = { id: index, ...doc };
-        }
-        if (doc.type.includes("Children's Books")) {
-          children[index] = { id: index, ...doc };
-        }
         if (doc.type.includes("Science and Math")) {
+          //
           scienceMath[index] = { id: index, ...doc };
-        }
-        if (doc.type.includes("Arts and Entertainment")) {
-          artsEntertainment[index] = { id: index, ...doc };
-        }
-        if (doc.type.includes("Religion")) {
-          religion[index] = { id: index, ...doc };
-        }
-        if (doc.type.includes("Cooking, Food and Wine")) {
-          cooking[index] = { id: index, ...doc };
         }
       });
 
       books = {
         History: history,
-        Travel: travel,
-        Education: education,
         Fiction: fiction,
-        Religion: religion,
         Thriller: thriller,
         "Science and Math": scienceMath,
-        "Computer and Technology": computerTechnology,
-        "Cooking, Food and Wine": cooking,
-        "Arts and Entertainment": artsEntertainment,
-        "Children's Books ": children,
-        "Detective Mystery": detectiveMystery,
       };
     }
     if (id === "movie") {

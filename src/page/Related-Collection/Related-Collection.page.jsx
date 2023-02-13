@@ -68,6 +68,7 @@ const RelatedCollection = ({
         var { director, writer, producer, performer } = itemDetail;
         itemList = itemList.filter((item) => {
           const itemPerformer = item.performer
+            .trim()
             .split(",")
             .map((item) => item.trim());
           const itemProducer = item.producer
@@ -106,12 +107,6 @@ const RelatedCollection = ({
           );
         });
       }
-
-      // const array = itemList.map(item=>{
-      //     console.log('asd',item.producer.split(',')[0])
-      //     return item
-      // })
-      // console.log('damn',array)
 
       if (doc == "books") {
         const { author } = itemDetail;

@@ -117,7 +117,7 @@ const DetailMovie = ({
   );
 
   const typesArray = item.type?.split(",");
-  const performerList = item.perfomer?.split(",");
+  const performerList = item.performer?.split(",");
   const producerList = item.producer?.split(",");
   const writerList = item.writer?.split(",");
   const directorList = item.director?.split(",");
@@ -153,7 +153,7 @@ const DetailMovie = ({
           </Span>
           <Span className="type">
             {typesArray.map((type, index) => (
-              <Link key={index} to={`/movies/category/${type.trim()}`}>
+              <Link key={index} to={`/movies/category/${type.trim()} `}>
                 {type}
               </Link>
             ))}
@@ -262,9 +262,9 @@ const DetailMovie = ({
 
       <Wrap className="detail-production">
         <h2>ACTOR AND MOVIE TITLE</h2>
-        <Wrap className="perfomer-producer">
+        <Wrap className="performer-producer">
           <Wrap className="performer">
-            <h2>Perfomer</h2>
+            <h2>Performer</h2>
             <Wrap className="performer-list">
               {performerList?.map((actor, index) => {
                 const job = "actors";
