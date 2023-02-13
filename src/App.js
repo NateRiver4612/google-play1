@@ -23,7 +23,6 @@ const App = ({ fetchCollectionsStart, checkUserSession }) => {
     fetchCollectionsStart();
     checkUserSession();
   }, [fetchCollectionsStart]);
-  const date = new Date();
 
   return (
     <Container>

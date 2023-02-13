@@ -116,11 +116,11 @@ const DetailMovie = ({
     [comments]
   );
 
-  const typesArray = type.split(",");
-  const performerList = performer.split(",");
-  const producerList = producer.split(",");
-  const writerList = writer.split(",");
-  const directorList = director.split(",");
+  const typesArray = item.type?.split(",");
+  const performerList = item.perfomer?.split(",");
+  const producerList = item.producer?.split(",");
+  const writerList = item.writer?.split(",");
+  const directorList = item.director?.split(",");
 
   const TEXT_COLLAPSE_OPTIONS = {
     collapse: false,
@@ -266,7 +266,7 @@ const DetailMovie = ({
           <Wrap className="performer">
             <h2>Perfomer</h2>
             <Wrap className="performer-list">
-              {performerList.map((actor, index) => {
+              {performerList?.map((actor, index) => {
                 const job = "actors";
                 const name = actor.trim();
                 if (index == performerList.length - 1) {
