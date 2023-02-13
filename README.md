@@ -13,32 +13,6 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
 
 
 <!-- ABOUT THE PROJECT -->
@@ -46,7 +20,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://google-play1.vercel.app/entertainment)
 
-For the Front-End, <a href="https://beta.reactjs.org/">ReactJS</a> is the best best Framwork for building front-end back in 2020 for its powers including flexibility, speed, reusable components, easy to approach, etc. For the back-end, we host all of our data in Firestore, Fireabase Storage, and Firebase Authentication for monitoring users google account, this website doesn't have server-side instead, we using APIs for Firebase document query for fetching and updating from database. Finally host our website on <a href="https://vercel.com/dashboard">Vercel</a>.
+For the Front-End, <a href="https://beta.reactjs.org/">ReactJS</a> is the best best Framwork for building front-end back in 2020 for its powers including flexibility, speed, reusable components, easy to approach, etc. For State-Managing we use Redux and ReduxSaga middleware. On the server-side, we host all of our data in Firestore, Fireabase Storage, and Firebase Authentication for monitoring users google account, this website doesn't have server-side instead, we using APIs for Firebase document query for fetching and updating from database. Finally host our website on <a href="https://vercel.com/dashboard">Vercel</a>.
 
 
 ### Built With
@@ -66,43 +40,35 @@ For the Front-End, <a href="https://beta.reactjs.org/">ReactJS</a> is the best b
  
 Follow these steps below to get and run a copy local version of FullStack Asos 
 
-### Prerequisites
-
-Go to <a href="https://rapidapi.com/apidojo/api/asos2">Asos Rapid API</a> and subscribe their API
-
 ### Installation
 
-1. Get RapidAPI Keys and urls at <a href="https://rapidapi.com/apidojo/api/asos2">Asos Rapid API</a>
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/NateRiver4612/FullStack-Asos.git
+   git clone https://github.com/NateRiver4612/google-play1.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
-   npm install // yarn install 
+    yarn install 
    ```
-4. Enter your API and copy this code to `.env`
-   ```js
-   X_RAPIDAPI_KEY= "ENTER_YOUR_X_RAPIDAPI_KEY"
-   X_RAPIDAPI_HOST= "asos2.p.rapidapi.com"
-   PRODUCT_LIST= "https://asos2.p.rapidapi.com/products/v2/list"
-   PRODUCT_DETAIL= "https://asos2.p.rapidapi.com/products/v3/detail"
+3. Run Website
+   ```sh
+    npm start
    ```
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-This website is uncompleted due to missing data supply, however there won't be no harm for clicking around. This website is responsive so you can use multiple devices, there's few things you can do right now is just view the list and detail of products, and google // email password sign in,sign up.   
+This website is not responsive at the time it's created, so highly recommended to experience on laptop. As as selling digital products website, you can view, you can search my product's name, if it's about movies, you can search for actors, director, writer, producer. For product's detail page, you can add your product to cart, even purchasing (using fake credit card), write your opinion in the comment section and rating for that product.    
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Home page
-- [ ] Products page
-- [ ] Product detail page
-- [ ] Registe page
+- [ ] Home Page // Entertainment Page
+- [ ] Movies // Books // Apps Page
+- [ ] Product Detail Page 
+- [ ] CheckOut Page // Purchased Items Page
 
 <!-- CONTACT -->
 ## Contact
@@ -114,7 +80,7 @@ Email:
 Mobile:
 - 0909209967
 
-Project Link: [https://github.com/NateRiver4612/FullStack-Asos.git](https://github.com/NateRiver4612/FullStack-Asos.git)
+Project Link: [https://github.com/NateRiver4612/google-play1.git](https://github.com/NateRiver4612/google-play1.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
