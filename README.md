@@ -58,7 +58,7 @@ Follow these steps below to get and run a copy local version of FullStack Asos
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-This website is not responsive at the time it's created, so highly recommended to experience on laptop. As as selling digital products website, you can view, you can search my product's name, if it's about movies, you can search for actors, director, writer, producer. For product's detail page, you can add your product to cart, even purchasing (using fake credit card), write your opinion in the comment section and rating for that product.    
+This website is not responsive at the time it's created, so highly recommended to experience on laptop only. As as selling digital products website, you can view, you can search by product's name, if it's about movies, you can search for actors, director, writer, producer. For product's detail page, you can add your product to cart, even purchasing (using fake credit card), write your opinion in the comment section and rating for that product.    
 
 
 
@@ -81,9 +81,6 @@ Mobile:
 - 0909209967
 
 Project Link: [https://github.com/NateRiver4612/google-play1.git](https://github.com/NateRiver4612/google-play1.git)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 
